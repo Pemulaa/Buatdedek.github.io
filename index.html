@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400;600&family=Montserrat&family=Pacifico&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="hero">
+          <h2 class="heading">HBD ziyla</h2>
+          <p class="sub-heading">ucapan selamat</p>
+        </div>
+        <div class="features-1"><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br<br><br><br><br><br><br><br><br><br><br><br></div>
+        <div class="features-2"><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
+      </header>
+
+      <nav class="menu">
+        <div class="menu-toggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="brand">byan❤ziyla</div>
+        <ul class="menu-list">
+          <li><a href="about.html">about</a></li>
+          <li><a href="playlist-lagu.html">playlist lagu</a></li>
+          <li><a href="gallery.html">gallery</a></li>
+        </ul>
+      </nav>
+
+      <div class="byan">
+        <div class="byan-foto">
+          <img src="byan-hai.jpg" alt="byan" title="hai,dedek ziyla">
+        </div>
+        <div class="selamat">
+          <img src="kue.png" alt="kue">
+          <h3>selamat ulang tahun sayang</h3>
+        </div>
+      </div>
+
+      <div class="lanjut">
+      <a href="lanjutan.html" class="btn">lanjut</a>
+      </div>
+
+      
+
+    </div>
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle input");
+      const nav = document.querySelector("nav ul");
+
+      menuToggle.addEventListener("click", function () {
+        nav.classList.toggle("slide");
+      });
+    </script>
+  </body>
+</html>

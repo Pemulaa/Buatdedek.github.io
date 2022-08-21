@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gallery</title>
+    <style>
+      body {
+        background-image: url(pink-flowers.webp);
+      }
+      h2 {
+        text-align: center;
+        font-size: 30px;
+        color: black;
+        font-weight: bold;
+      }
+      .gallery {
+        text-align: center;
+        justify-content: center;
+        display: grid;
+        gap: 20px;
+        margin: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      }
+      img {
+        width: 250px;
+      }
+      .foto {
+        background-color: grey;
+        padding: 15px;
+        text-align: center;
+        border: 1px solid rgba(128, 128, 128, 0.502);
+        border-radius: 3px;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+        margin: 10px;
+      }
+
+      .kembali {
+        margin: 50px;
+        height: 100%;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+      .btn {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+        background: rgb(223, 40, 141);
+        width: 160px;
+        padding: 20px;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 0 0 10px rgba(208, 7, 7, 0.3);
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-property: box-shadow, transform;
+        transition-property: box-shadow, transform;
+      }
+
+      .btn:hover,
+      .btn:focus,
+      .btn:active {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+      }
+
+      @media screen and (max-width: 578px) {
+        img {
+          width: 300px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h2>FOTO</h2>
+    <section class="gallery">
+      <div class="foto">
+        <img src="ulzzang1.jpg" alt="" />
+      </div>
+      <div class="foto">
+        <img src="ulzzang2.jpg" alt="" />
+      </div>
+      <div class="foto">
+        <img src="ulzzang3.jpg" alt="" />
+      </div>
+      <div class="foto">
+        <img src="ulzzang4.jpg" alt="" />
+      </div>
+      <div class="foto">
+        <img src="ulzzang5.jpg" alt="" />
+      </div>
+      <div class="foto">
+        <img src="ulzzang6.jpg" alt="" />
+      </div>
+      <div class="foto">
+        <img src="ulzzang7.jpg" alt="" />
+      </div>
+      <div class="foto">
+        <img src="ulzzang8.jpg" alt="" />
+      </div>
+    </section>
+
+    <div class="kembali">
+      <a href="index.html" class="btn">kembali</a>
+    </div>
+  </body>
+</html>

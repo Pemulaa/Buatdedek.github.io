@@ -1,0 +1,338 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+img {
+  width: 100%;
+}
+body {
+  background-color: rgba(234, 207, 207, 0.481);
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  margin: 40px;
+}
+/* container */
+.container {
+  display: grid;
+  gap: 10px;
+}
+
+/* header */
+
+.header {
+  display: grid;
+  grid-template-areas:
+    "hero hero features-1"
+    "hero hero features-2";
+}
+.hero {
+  grid-area: hero;
+  min-height: 250px;
+  background-image: url(ucapanultah.jpeg);
+  background-size: cover;
+  background-position: center;
+  padding: 50px;
+}
+
+.hero h2,
+.hero p {
+  display: none;
+}
+
+.features-1,
+.features-2 {
+  background-color: black;
+  color: white;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+.features-1 {
+  grid-area: features-1;
+  background-image: url(fotoirene1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.features-2 {
+  grid-area: features-2;
+  background-image: url(mingyu.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+/* navbar */
+
+.menu {
+  order: -1;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+}
+.menu .brand {
+  font-size: 1.2em;
+  color: gray;
+}
+.menu ul {
+  display: grid;
+  list-style: none;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 5px;
+}
+.menu a {
+  display: block;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 5px;
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+/* hamburger */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+  z-index: 3;
+}
+
+.menu-toggle input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  left: -6px;
+  top: -3px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: black;
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+
+/* hamburger menu animation */
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+  background-color: white;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+  background-color: white;
+  transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+  opacity: 0;
+  transform: scale(0);
+}
+
+/* byan */
+.byan {
+  background-image: url(bg.webp);
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  grid-template-areas:
+    "byan-foto selamat"
+    "byan-foto selamat";
+}
+.byan-foto img {
+  width: 350px;
+  height: 600px;
+  margin: 10px auto;
+  padding: 10px;
+  grid-area: byan-foto;
+}
+
+.selamat {
+  padding: 10px;
+  grid-area: selamat;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+}
+.selamat img {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  border: 5px solid rgb(199, 91, 163);
+  box-shadow: 5px 5px 5px rgba(198, 138, 190, 0.3);
+}
+.selamat h3 {
+  text-transform: uppercase;
+  font-size: 30px;
+  color: black;
+  padding: 20px;
+}
+/* tombol */
+.lanjut {
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.btn {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  background: rgb(74, 74, 174);
+  width: 160px;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+/* akhir tombol */
+
+/* responsive breakpoin */
+@media screen and (max-width: 1024px) {
+  .menu {
+    order: inherit;
+    grid-template-columns: 1fr;
+  }
+  .menu .brand {
+    display: none;
+  }
+  .hero > * {
+    display: block;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    margin-bottom: 5px;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .menu {
+    order: -1;
+    justify-items: end;
+  }
+  .menu-toggle {
+    display: flex;
+  }
+  .menu ul {
+    display: flex;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    z-index: 1;
+    transform: translateY(-100%);
+    transition: all 1s;
+    opacity: 0;
+  }
+
+  .menu ul.slide {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .header {
+    grid-template-areas:
+      "hero"
+      "features-1"
+      "features-2"
+      "features-2";
+  }
+  .byan {
+    grid-template-areas:
+      "byan-foto"
+      "selamat";
+  }
+}
+
+@media screen and (max-width: 578px) {
+  .hero {
+    grid-area: hero;
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+  }
+  body {
+    margin: 15px;
+  }
+  .header {
+    grid-template-areas:
+      "hero"
+      "features-1"
+      "features-2"
+      "features-2";
+  }
+
+  .byan {
+    grid-template-areas:
+      "byan-foto"
+      "selamat";
+  }
+  .byan-foto img {
+    width: 300px;
+    height: 300px;
+    margin: 10px auto;
+    padding: 10px;
+    grid-area: byan-foto;
+  }
+
+  .selamat {
+    padding: 10px;
+    grid-area: selamat;
+    justify-content: center;
+    text-align: center;
+  }
+  .selamat img {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    border: 5px solid rgb(199, 91, 163);
+    box-shadow: 5px 5px 5px rgba(198, 138, 190, 0.3);
+  }
+  .selamat h3 {
+    text-transform: uppercase;
+    font-size: 30px;
+    color: black;
+  }
+}
